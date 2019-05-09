@@ -66,13 +66,7 @@
 
         <div class="header-content col px-md-3 px-md-3">
           <div class="d-flex align-items-center">
-            <!-- Side Nav Toggle -->
-            <a class="js-side-nav header-invoker mr-md-2" href="#"
-               data-close-invoker="#sidebarClose"
-               data-target="#sidebar"
-               data-target-wrapper="body">
-              <i class="nova-align-left"></i>
-            </a>
+            <!-- Side Nav Toggle -->              
             <!-- End Side Nav Toggle -->
 
             <!-- Header Search -->
@@ -98,8 +92,62 @@
                 </div>
 
                 <div id="headerSearchResults" class="unfold unfold-light unfold-top unfold-centered position-absolute w-100 mt-3">
+                  <div class="border-bottom px-3 px-md-4 py-3">
+                    <h6 class="font-weight-semi-bold mb-3">Projects</h6>
 
+                    <ul class="list-unstyled mb-0">
+                      <li class="mb-2">
+                        <a class="link-dark" href="#">Technical delivery call</a>
+                      </li>
+                      <li class="mb-2">
+                        <a class="link-dark" href="#">R&D meeting</a>
+                      </li>
+                      <li class="mb-2">
+                        <a class="link-dark" href="#">Discuss campaign performance</a>
+                      </li>
+                      <li class="mb-0">
+                        <a class="link-dark" href="#">SciFi Writing Group</a>
+                      </li>
+                    </ul>
+                  </div>
 
+                  <div class="border-bottom px-3 px-md-4 py-3">
+                    <h6 class="font-weight-semi-bold mb-3">Projects</h6>
+
+                    <ul class="list-unstyled mb-0">
+                      <li class="mb-2">
+                        <a class="link-dark media align-items-center" href="#">
+                          <img class="avatar rounded-circle mr-2" src="../../assets/img/100x100/img4.jpg" width="40" alt="Image description">
+
+                          <div class="media-body">
+                            <h6 class="font-weight-semi-bold mb-0">Frances James</h6>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="mb-2">
+                        <a class="link-dark media align-items-center" href="#">
+                          <img class="avatar rounded-circle mr-2" src="../../assets/img/100x100/img6.jpg" width="40" alt="Image description">
+
+                          <div class="media-body">
+                            <h6 class="font-weight-semi-bold mb-0">Susie Gibbs</h6>
+                          </div>
+                        </a>
+                      </li>
+                      <li class="mb-2">
+                        <a class="link-dark media align-items-center" href="#">
+                          <img class="avatar rounded-circle mr-2" src="../../assets/img/100x100/img12.jpg" width="40" alt="Image description">
+
+                          <div class="media-body">
+                            <h6 class="font-weight-semi-bold mb-0">Gertrude Ramsey</h6>
+                          </div>
+                        </a>
+                      </li>
+                    </ul>
+                  </div>
+
+                  <div class="px-3 px-md-4 py-3">
+                    <a class="link" href="#">Show all (24) Results</a>
+                  </div>
                 </div>
               </form>
             </div>
@@ -107,16 +155,6 @@
 
             <!-- Header Dropdown -->
             <div class="dropdown ml-auto">
-              <a id="messagesInvoker" class="header-invoker" href="#" aria-controls="messages" aria-haspopup="true" aria-expanded="false"
-                 data-unfold-event="click"
-                 data-unfold-target="#messages"
-                 data-unfold-type="css-animation"
-                 data-unfold-duration="300"
-                 data-unfold-animation-in="fadeIn"
-                 data-unfold-animation-out="fadeOut">
-                <span class="indicator indicator-bordered indicator-top-right indicator-secondary rounded-circle"></span>
-                <i class="nova-email"></i>
-              </a>
 
               <div id="messages" class="dropdown-menu dropdown-menu-center py-0 mt-4 w-18_75rem w-md-22_5rem" aria-labelledby="messagesInvoker">
                 <div class="card">
@@ -223,7 +261,7 @@
                  data-unfold-animation-in="fadeIn"
                  data-unfold-animation-out="fadeOut">
                 <span class="indicator indicator-bordered indicator-top-right indicator-primary rounded-circle"></span>
-                <i class="nova-bell"></i>
+                <i class="fas fa-bell"></i>
               </a>
 
               <div id="notifications" class="dropdown-menu dropdown-menu-center py-0 mt-4 w-18_75rem w-md-22_5rem" aria-labelledby="notificationsInvoker">
@@ -303,8 +341,8 @@
                  data-unfold-animation-in="fadeIn"
                  data-unfold-animation-out="fadeOut">
                 <img class="avatar rounded-circle mr-md-2" src="images/cr7.jpg" alt="Image description">
-                <span class="d-none d-md-block">Marco Félix</span>
-                <i class="nova-angle-down d-none d-md-block ml-2"></i>
+                <span class="d-none d-md-block">Marco Félix</span>                
+                <i class="fas fa-caret-down ml-2"></i>
               </a>
 
               <ul id="profileMenu" class="unfold unfold-user unfold-light unfold-top unfold-centered position-absolute pt-2 pb-1 mt-4" aria-labelledby="profileMenuInvoker">
@@ -353,15 +391,12 @@
             <!-- End Header User Dropdown -->
 
             <!-- Info Sidebar Toggle -->
-            <a id="activityInvoker" class="header-invoker" href="#" aria-controls="activity" aria-haspopup="true" aria-expanded="false"
-               data-unfold-event="click"
-               data-unfold-target="#activity"
-               data-unfold-type="css-animation"
-               data-unfold-animation-in="fadeInRight"
-               data-unfold-animation-out="fadeOutRight"
-               data-unfold-duration="300">
-              <i class="nova-align-right"></i>
-            </a>
+            <a class="js-side-nav header-invoker mr-md-2" href="#"
+                 data-close-invoker="#sidebarClose"
+                 data-target="#sidebar"
+                 data-target-wrapper="body">
+                <i class="fas fa-align-justify"></i>
+            </a>              
             <!-- End Info Sidebar Toggle -->
 
 
@@ -462,7 +497,7 @@
           <li class="side-nav-menu-item">
             <a class="side-nav-menu-link media align-items-center" href="#">
               <span class="side-nav-menu-icon d-flex mr-3">
-                <i class="fas fa-camera"></i>
+                <i class="fas fa-bell"></i>
               </span>
               <span class="side-nav-fadeout-on-closed media-body"> Errors</span>
             </a>
@@ -528,29 +563,87 @@
 
       <div class="content">
         
-        <div class="py-4 px-3 px-md-4 radius">          
-          
+        <div class="py-4 px-3 px-md-4 radius">
+                        
           <div class="card text-center">
             <div class="page-header card-header">
               <div class="center newphoto radius"> 
-                <i class="fas fa-camera" style="margin-top: 10px;"></i> Change Background Photo 
-                
+                <i class="fas fa-camera" style="margin-top: 10px;"></i> Change Background Photo                 
               </div>
             </div>
+
             <div class="card-body">
-              <ul class="nav nav-tabs card-header-tabs">
-                <li class="nav-item">
-                  <a class="nav-link active" href="#">General</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Projects</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link disabled" href="#">Colaboration</a>
-                </li>
-              </ul>
+
+              <!-- <form>
+                <ul class="nav nav-tabs">
+                  <li class="active nav-item">
+                    <a data-toggle="tab" href="#general"><b>General</b></a>
+                  </li>
+                  <li class="nav-item">
+                    <a data-toggle="tab" href="#app"><b>Appministra</b></a>
+                  </li>
+                </ul>
+              </form> -->
+
+
+
+              
+              <form>
+                <ul class="nav nav-tabs card-header-tabs">
+                  <li class="nav-item active">
+                    <a class="nav-link" href="#general">General</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Projects</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Collaboration</a>
+                  </li>
+                </ul>
+                
+                <div class="tab-content">
+                  <div id="general" class="tab-pane fade in active">
+                    <h1>dss</h1>
+                  </div>
+                </div>
+              </form>
+
+              <div style="color:black; text-align: left; border:solid;">              
+                <div class="row">
+                  <label>General</label>
+                </div>
+                <div class="row">
+                  <label>Setup your general profile details.</label>
+                </div>
+                <div class="row"> 
+
+                    <div class="col-md-8 col-xl-8" style="border:solid;">
+                      
+                      <div class="row">
+                        <div class="form-group col-md-6 col-xl-6">
+                          <label class="d-block small text-muted mb-1" for="legalFirstName">First Name</label>
+                          <input id="legalFirstName" class="form-control" name="legalFirstName" value="Joshua" type="text">
+                        </div>
+
+                        <div class="form-group col-md-6 col-xl-6">
+                          <label class="d-block small text-muted mb-1" for="legalFirstName">Last Name</label>
+                          <input id="legalFirstName" class="form-control" name="legalFirstName" value="Joshua" type="text">
+                        </div>
+                      </div>
+
+                    </div>
+
+                    <div class="col-md-4 col-xl-4" style="border:solid;">
+                      <h1>2</h1>
+                    </div>                  
+                </div>
+              </div>
+              
+              
             </div>
+
           </div>
+
 
         </div>
 

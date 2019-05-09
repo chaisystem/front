@@ -5,6 +5,46 @@
  * Copyright 2011-2019 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
+:root {
+  --blue: #377dff;
+  --indigo: #6610f2;
+  --purple: #796eff;
+  --pink: #e83e8c;
+  --red: #de4437;
+  --orange: #fd7e14;
+  --yellow: #fcd53b;
+  --green: #28a745;
+  --teal: #00c9a7;
+  --cyan: #00dffc;
+  --white: #fff;
+  --gray: #6c757d;
+  --gray-dark: #343a40;
+  --primary: #8069f2;
+  --secondary: #07d7f7;
+  --success: #0cdcb9;
+  --info: #474dee;
+  --warning: #fcd53b;
+  --danger: #ef5b5b;
+  --light: #cdced6;
+  --dark: #1e2022;
+  --primary-darker: #2e11c1;
+  --primary-lighter: #ebe8fd;
+  --darker: #151829;
+  --lighter: #f9f9f9;
+  --breakpoint-xs: 0;
+  --breakpoint-sm: 576px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 992px;
+  --breakpoint-xl: 1200px;
+  --font-family-sans-serif: "Source Sans Pro", Helvetica, Arial, sans-serif;
+  --font-family-monospace: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
 html {
   font-family: sans-serif;
@@ -28,16 +68,481 @@ body {
   background-color: #ffffff;
 }
 
+[tabindex="-1"]:focus {
+  outline: 0 !important;
+}
+
+hr {
+  box-sizing: content-box;
+  height: 0;
+  overflow: visible;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+}
+
+p {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+abbr[title],
+abbr[data-original-title] {
+  text-decoration: underline;
+  -webkit-text-decoration: underline dotted;
+          text-decoration: underline dotted;
+  cursor: help;
+  border-bottom: 0;
+  text-decoration-skip-ink: none;
+}
+
+address {
+  margin-bottom: 1rem;
+  font-style: normal;
+  line-height: inherit;
+}
+
+ol,
+ul,
+dl {
+  margin-top: 0;
+  margin-bottom: 1rem;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+  margin-bottom: 0;
+}
+
+dt {
+  font-weight: 700;
+}
+
+dd {
+  margin-bottom: .5rem;
+  margin-left: 0;
+}
+
+blockquote {
+  margin: 0 0 1rem;
+}
+
+b,
+strong {
+  font-weight: bolder;
+}
+
+small {
+  font-size: 80%;
+}
+
+sub,
+sup {
+  position: relative;
+  font-size: 75%;
+  line-height: 0;
+  vertical-align: baseline;
+}
+
+sub {
+  bottom: -.25em;
+}
+
+sup {
+  top: -.5em;
+}
+
+a {
+  color: #8069f2; /*chais*/
+  text-decoration: none;
+  background-color: transparent;
+}
+
+a:hover {
+  color: #583aee;
+  text-decoration: none;
+}
+
+a:not([href]):not([tabindex]) {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:not([href]):not([tabindex]):hover, a:not([href]):not([tabindex]):focus {
+  color: inherit;
+  text-decoration: none;
+}
+
+a:not([href]):not([tabindex]):focus {
+  outline: 0;
+}
+
+pre,
+code,
+kbd,
+samp {
+  font-family: SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+  font-size: 1em;
+}
+
+pre {
+  margin-top: 0;
+  margin-bottom: 1rem;
+  overflow: auto;
+}
+
+figure {
+  margin: 0 0 1rem;
+}
 
 img {
   vertical-align: middle;
   border-style: none;
 }
 
+svg {
+  overflow: hidden;
+  vertical-align: middle;
+}
 
+table {
+  border-collapse: collapse;
+}
 
+caption {
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+  color: #868e96;
+  text-align: left;
+  caption-side: bottom;
+}
 
+th {
+  text-align: inherit;
+}
 
+label {
+  display: inline-block;
+  margin-bottom: 0.5rem;
+}
+
+button {
+  border-radius: 0;
+}
+
+button:focus {
+  outline: 1px dotted;
+  outline: 5px auto -webkit-focus-ring-color;
+}
+
+input,
+button,
+select,
+optgroup,
+textarea {
+  margin: 0;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
+}
+
+button,
+input {
+  overflow: visible;
+}
+
+button,
+select {
+  text-transform: none;
+}
+
+select {
+  word-wrap: normal;
+}
+
+button,
+[type="button"],
+[type="reset"],
+[type="submit"] {
+  -webkit-appearance: button;
+}
+
+button:not(:disabled),
+[type="button"]:not(:disabled),
+[type="reset"]:not(:disabled),
+[type="submit"]:not(:disabled) {
+  cursor: pointer;
+}
+
+button::-moz-focus-inner,
+[type="button"]::-moz-focus-inner,
+[type="reset"]::-moz-focus-inner,
+[type="submit"]::-moz-focus-inner {
+  padding: 0;
+  border-style: none;
+}
+
+input[type="radio"],
+input[type="checkbox"] {
+  box-sizing: border-box;
+  padding: 0;
+}
+
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"] {
+  -webkit-appearance: listbox;
+}
+
+textarea {
+  overflow: auto;
+  resize: vertical;
+}
+
+fieldset {
+  min-width: 0;
+  padding: 0;
+  margin: 0;
+  border: 0;
+}
+
+legend {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+  padding: 0;
+  margin-bottom: .5rem;
+  font-size: 1.5rem;
+  line-height: inherit;
+  color: inherit;
+  white-space: normal;
+}
+
+progress {
+  vertical-align: baseline;
+}
+
+[type="number"]::-webkit-inner-spin-button,
+[type="number"]::-webkit-outer-spin-button {
+  height: auto;
+}
+
+[type="search"] {
+  outline-offset: -2px;
+  -webkit-appearance: none;
+}
+
+[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+
+::-webkit-file-upload-button {
+  font: inherit;
+  -webkit-appearance: button;
+}
+
+output {
+  display: inline-block;
+}
+
+summary {
+  display: list-item;
+  cursor: pointer;
+}
+
+template {
+  display: none;
+}
+
+[hidden] {
+  display: none !important;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  margin-bottom: 0.5rem;
+  font-weight: 300;
+  line-height: 1.3;
+}
+
+h1, .h1 {
+  font-size: 2.5rem;
+}
+
+h2, .h2 {
+  font-size: 2rem;
+}
+
+h3, .h3 {
+  font-size: 1.75rem;
+}
+
+h4, .h4 {
+  font-size: 1.5rem;
+}
+
+h5, .h5 {
+  font-size: 1.125rem;
+}
+
+h6, .h6 {
+  font-size: 1rem;
+}
+
+.lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
+.display-1 {
+  font-size: 6rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.display-2 {
+  font-size: 5.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.display-3 {
+  font-size: 4.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+.display-4 {
+  font-size: 3.5rem;
+  font-weight: 300;
+  line-height: 1.2;
+}
+
+hr {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  border: 0;
+  border-top: 1px solid #eeeef1;
+}
+
+small,
+.small {
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+mark,
+.mark {
+  padding: 0.2em;
+  background-color: rgba(128, 105, 242, 0.1);
+}
+
+.list-unstyled {
+  padding-left: 0;
+  list-style: none;
+}
+
+.list-inline {
+  padding-left: 0;
+  list-style: none;
+}
+
+.list-inline-item {
+  display: inline-block;
+}
+
+.list-inline-item:not(:last-child) {
+  margin-right: 0.5rem;
+}
+
+.initialism {
+  font-size: 90%;
+  text-transform: uppercase;
+}
+
+.blockquote {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.blockquote-footer {
+  display: block;
+  font-size: 0.875rem;
+  color: #6c757d;
+}
+
+.blockquote-footer::before {
+  content: "\2014\00A0";
+}
+
+.img-fluid {
+  max-width: 100%;
+  height: auto;
+}
+
+.img-thumbnail {
+  padding: 0.25rem;
+  background-color: #f3f5fa;
+  border: 1px solid #cdced6;
+  border-radius: 0.125rem;
+  max-width: 100%;
+  height: auto;
+}
+
+.figure {
+  display: inline-block;
+}
+
+.figure-img {
+  margin-bottom: 0.5rem;
+  line-height: 1;
+}
+
+.figure-caption {
+  font-size: 90%;
+  color: #6c757d;
+}
+
+code {
+  font-size: 87.5%;
+  color: #e83e8c;
+  word-break: break-word;
+}
+
+a > code {
+  color: inherit;
+}
+
+kbd {
+  padding: 0.2rem 0.4rem;
+  font-size: 87.5%;
+  color: #fff;
+  background-color: #212529;
+  border-radius: 0.125rem;
+}
+
+kbd kbd {
+  padding: 0;
+  font-size: 100%;
+  font-weight: 700;
+}
+
+pre {
+  display: block;
+  font-size: 87.5%;
+  color: #212529;
+}
+
+pre code {
+  font-size: inherit;
+  color: inherit;
+  word-break: normal;
+}
 
 .pre-scrollable {
   max-height: 340px;
@@ -12201,7 +12706,7 @@ button:focus {
 }
 
 /*------------------------------------
-  Alerts
+	Alerts
 ------------------------------------*/
 .alert .close {
   text-shadow: none;
@@ -12258,7 +12763,7 @@ button:focus {
 }
 
 /*------------------------------------
-  Avatar
+	Avatar
 ------------------------------------*/
 .avatar {
   width: 2.5rem;
@@ -12286,7 +12791,7 @@ button:focus {
 }
 
 /*------------------------------------
-  Badges
+	Badges
 ------------------------------------*/
 .badge-complex {
   padding: 0.125rem 0.5rem 0.125rem 0.125rem;
@@ -12402,7 +12907,7 @@ button:focus {
 }
 
 /*------------------------------------
-  Buttons
+	Buttons
 ------------------------------------*/
 .btn-soft-primary {
   color: #8069f2;
@@ -12744,7 +13249,7 @@ button:focus {
 }
 
 /*------------------------------------
-  Buttons Sizes
+	Buttons Sizes
 ------------------------------------*/
 .btn-width-xs {
   min-width: 6.25rem;
@@ -12777,7 +13282,7 @@ button:focus {
 }
 
 /*------------------------------------
-  Cards
+	Cards
 ------------------------------------*/
 @media (min-width: 768px) {
   .card-body {
@@ -13089,7 +13594,7 @@ svg.ct-chart-bar, svg.ct-chart-donut, svg.ct-chart-line {
 }
 
 /*------------------------------------
-  Tooltips
+	Tooltips
 ------------------------------------*/
 .chart-tooltip {
   min-width: auto;
@@ -13150,7 +13655,7 @@ svg.ct-chart-bar, svg.ct-chart-donut, svg.ct-chart-line {
 }
 
 /*------------------------------------
-  Tooltips Divided
+	Tooltips Divided
 ------------------------------------*/
 .ct-series foreignObject {
   overflow: visible;
@@ -13204,7 +13709,7 @@ svg.ct-chart-bar, svg.ct-chart-donut, svg.ct-chart-line {
 }
 
 /*------------------------------------
-  Tooltips Custom
+	Tooltips Custom
 ------------------------------------*/
 .chartist-tooltip-custom {
   position: absolute;
@@ -13245,7 +13750,7 @@ svg.ct-chart-bar, svg.ct-chart-donut, svg.ct-chart-line {
 }
 
 /*------------------------------------
-  Tooltips Position
+	Tooltips Position
 ------------------------------------*/
 .chart-tooltip--centered {
   top: 50% !important;
@@ -13255,7 +13760,7 @@ svg.ct-chart-bar, svg.ct-chart-donut, svg.ct-chart-line {
 }
 
 /*------------------------------------
-  Tooltips Themes
+	Tooltips Themes
 ------------------------------------*/
 .chart-tooltip.bg-white:not(.chart-tooltip--none-triangle)::before {
   border-color: #fff transparent transparent transparent;
@@ -13559,7 +14064,7 @@ svg.ct-chart-bar, svg.ct-chart-donut, svg.ct-chart-line {
 }
 
 /*------------------------------------
-  Dropdowns
+	Dropdowns
 ------------------------------------*/
 .dropdown-toggle::before, .dropdown-toggle::after,
 .dropup .dropdown-toggle::before,
@@ -13708,7 +14213,7 @@ svg.ct-chart-bar, svg.ct-chart-donut, svg.ct-chart-line {
 }
 
 /*------------------------------------
-  Forms
+	Forms
 ------------------------------------*/
 .form-check {
   line-height: 1.5;
@@ -13815,7 +14320,7 @@ input:checked + .btn .form-check-subtext {
 }
 
 /*------------------------------------
-  Checkboxes and Radio Buttons
+	Checkboxes and Radio Buttons
 ------------------------------------*/
 .checkbox::before {
   content: "";
@@ -13842,7 +14347,7 @@ input[type="checkbox"]:checked + .checkbox::before {
 }
 
 /*------------------------------------
-  Checkboxes with Text
+	Checkboxes with Text
 ------------------------------------*/
 .checkbox-text .text-unchecked {
   display: inline-block;
@@ -13861,14 +14366,14 @@ input[type="checkbox"]:checked + .checkbox-text .text-checked {
 }
 
 /*------------------------------------
-  Checkboxes and Radio Buttons Sizes
+	Checkboxes and Radio Buttons Sizes
 ------------------------------------*/
 .checkbox-xxs::before {
   font-size: 0.63rem;
 }
 
 /*------------------------------------
-  Form controls
+	Form controls
 ------------------------------------*/
 .form-control {
   border-radius: 0.125rem !important;
@@ -13925,7 +14430,7 @@ input[type="checkbox"]:checked + .checkbox-text .text-checked {
 }
 
 /*------------------------------------
-  Radios Buttons
+	Radios Buttons
 ------------------------------------*/
 .radio::before {
   content: "";
@@ -13952,7 +14457,7 @@ input[type="radio"]:checked + .radio::before {
 }
 
 /*------------------------------------
-  Radios with Text
+	Radios with Text
 ------------------------------------*/
 .radio-text .text-unchecked {
   display: inline-block;
@@ -13971,7 +14476,7 @@ input[type="radio"]:checked + .radio-text .text-checked {
 }
 
 /*------------------------------------
-  Radios Buttons Sizes
+	Radios Buttons Sizes
 ------------------------------------*/
 .radio-xxs::before {
   font-size: 0.63rem;
@@ -14008,7 +14513,7 @@ input[type="radio"]:checked + .radio-text .text-checked {
 }
 
 /*------------------------------------
-  Selects
+	Selects
 ------------------------------------*/
 .select2-dropdown {
   border-color: #eeeef1;
@@ -14044,7 +14549,7 @@ input[type="radio"]:checked + .radio-text .text-checked {
 }
 
 /*------------------------------------
-  Select Simple
+	Select Simple
 ------------------------------------*/
 .select-simple.select2-selection--single {
   border: 0;
@@ -14083,7 +14588,7 @@ input[type="radio"]:checked + .radio-text .text-checked {
 }
 
 /*------------------------------------
-  Select Bordered
+	Select Bordered
 ------------------------------------*/
 .select-bordered.select2-selection--single {
   border: 1px solid #eeeef1;
@@ -14127,7 +14632,7 @@ input[type="radio"]:checked + .radio-text .text-checked {
 }
 
 /*------------------------------------
-  Select Sizes
+	Select Sizes
 ------------------------------------*/
 .select-lg.select2-selection--single .select2-selection__rendered {
   padding-top: 0.75rem;
@@ -14141,14 +14646,14 @@ input[type="radio"]:checked + .radio-text .text-checked {
 }
 
 /*------------------------------------
-  Select Styles
+	Select Styles
 ------------------------------------*/
 .select-bold > span {
   font-weight: 600 !important;
 }
 
 /*------------------------------------
-  Switch
+	Switch
 ------------------------------------*/
 .custom-switch {
   padding-left: 3rem;
@@ -14518,7 +15023,7 @@ input.focused + * + .focus-hide {
 }
 
 /*------------------------------------
-  Indicators
+	Indicators
 ------------------------------------*/
 .indicator {
   display: block;
@@ -14832,7 +15337,7 @@ body.has-fixed-sidebar-and-header .main {
 }
 
 /*------------------------------------
-  List. Dot.
+	List. Dot.
 ------------------------------------*/
 .list-dot {
   list-style: none;
@@ -15051,7 +15556,7 @@ body.has-fixed-sidebar-and-header .main {
 }
 
 /*------------------------------------
-  Progress
+	Progress
 ------------------------------------*/
 .progress-light {
   background-color: #ebe8fd;
@@ -15457,7 +15962,7 @@ body.side-nav-mini-mode.side-nav-closed .side-nav-fadeout-on-closed {
 }
 
 /*------------------------------------
-  Tabs Sizes
+	Tabs Sizes
 ------------------------------------*/
 .nav-sm .nav-item {
   font-size: 1rem;
@@ -15469,7 +15974,7 @@ body.side-nav-mini-mode.side-nav-closed .side-nav-fadeout-on-closed {
 }
 
 /*------------------------------------
-  Tabs Themes
+	Tabs Themes
 ------------------------------------*/
 .nav {
   /* Primary */
@@ -15498,7 +16003,7 @@ body.side-nav-mini-mode.side-nav-closed .side-nav-fadeout-on-closed {
 }
 
 /*------------------------------------
-  Tabs Designs
+	Tabs Designs
 ------------------------------------*/
 .nav-v2 .nav-link {
   position: relative;
@@ -15562,7 +16067,7 @@ body.side-nav-mini-mode.side-nav-closed .side-nav-fadeout-on-closed {
 }
 
 /*------------------------------------
-  Tabs Mobile View
+	Tabs Mobile View
 ------------------------------------*/
 .nav-mobile-mode-on.nav-mobile-container {
   position: relative;
@@ -15618,7 +16123,7 @@ body.side-nav-mini-mode.side-nav-closed .side-nav-fadeout-on-closed {
 }
 
 /*------------------------------------
-  Tabs Mobile Text Alignment
+	Tabs Mobile Text Alignment
 ------------------------------------*/
 .nav-mobile-mode-on .nav-mobile-text-center .nav-mobile-item, .nav-mobile-mode-on .nav-mobile-text-center .nav-mobile-link {
   text-align: center;
@@ -15633,7 +16138,7 @@ body.side-nav-mini-mode.side-nav-closed .side-nav-fadeout-on-closed {
 }
 
 /*------------------------------------
-  Tabs Mobile View Positions
+	Tabs Mobile View Positions
 ------------------------------------*/
 .nav-mobile-mode-on .nav-mobile-center {
   left: 50%;
@@ -15650,14 +16155,14 @@ body.side-nav-mini-mode.side-nav-closed .side-nav-fadeout-on-closed {
 }
 
 /*------------------------------------
-  Tabs Mobile View Themes
+	Tabs Mobile View Themes
 ------------------------------------*/
 .nav-mobile-mode-on .nav-mobile-shade {
   box-shadow: 0 4px 24px 0 rgba(0, 0, 0, 0.1);
 }
 
 /*------------------------------------
-  Unfold
+	Unfold
 ------------------------------------*/
 .unfold {
   display: none;
